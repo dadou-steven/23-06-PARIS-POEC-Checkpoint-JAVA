@@ -1,13 +1,24 @@
+
+import Cinema.Cinema;
+import Client.Client;
+import Film.Film;
+import Place.Place;
+import Reservation.Reservation;
+import Salle.Salle;
+import Seance.Seance;
+
 import java.sql.Time;
 import java.util.*;
 
 public class Main {
+    private static Object place1;
+
     public static void main(String[] args) {
         // Création du cinéma
         Cinema cinema = new Cinema("Cineplex", "123 Rue de Cinema");
         System.out.println("Cinema created: " + cinema);
 
-        // Création des place
+        // Création des places
         List<String> places = new ArrayList<>();
         String[] rows = {"A", "B", "C", "D", "E", "F", "G"};
         for(String row : rows) {
